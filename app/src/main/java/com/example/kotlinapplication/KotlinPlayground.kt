@@ -5,23 +5,27 @@ package com.example.kotlinapplication
  * @date 1/20/2021
  * com.example.kotlinapplication
  */
+fun main() {
+    val solution = Solution()
+    val test = intArrayOf(4, 1, 1, 0)
+    val listNode = ListNode(1)
+//    listNode.next = ListNode(2)
+    println(solution.maxArea(test))
+}
 
-class Test {
-    fun numTeams(rating: IntArray): Int {
-        var count = 0
-        for (i in 1..rating.size - 2) {
-            var pre = 0
-            var next = 0
-            var maxPre = 0
-            var maxNext = 0
-            for (j in 0 until i) {
-                if (rating[j] < rating[i]) pre++ else if (rating[j] > rating[i]) maxPre++
-            }
-            for (k in i + 1 until rating.size) {
-                if (rating[i] < rating[k]) next++ else if (rating[i] > rating[k]) maxNext++
-            }
-            count += pre * next + maxPre * maxNext
-        }
-        return count
+class TreeNode(var `val`: Int) {
+    var left: TreeNode? = null
+    var right: TreeNode? = null
+}
+
+class ListNode(var `val`: Int) {
+    var next: ListNode? = null
+}
+
+class Solution {
+    fun maxArea(height: IntArray): Int {
+        var max=0
+
+        return max
     }
 }
